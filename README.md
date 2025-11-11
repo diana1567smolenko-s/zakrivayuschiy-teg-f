@@ -1,1 +1,1 @@
-[Pproject "zakrivayuschiy-teg"](git@github.com:diana1567smolenko-s/zakrivayuschiy-teg-f.git) 
+[Pproject "zakrivayuschiy-teg"](https://diana1567smolenko-s.github.io/zakrivayuschiy-teg-f/) 
