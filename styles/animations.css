@@ -9,8 +9,12 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки*/
 
 
-.like-icon {
+.like-icon g{
   transform-origin: center;
+}
+.like-icon {
+  justify-content: center;
+  align-items: center;
 }
 
 .like-icon.is-liked .core {
