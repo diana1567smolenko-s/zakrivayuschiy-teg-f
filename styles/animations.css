@@ -9,9 +9,10 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки*/
 
 
-.like-icon g{
+.like-icon g {
   transform-origin: center;
 }
+
 .like-icon {
   justify-content: center;
   align-items: center;
@@ -33,9 +34,17 @@
 }
 
 @keyframes heart-scale {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.25); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .like-icon.is-liked .heart {
@@ -43,9 +52,17 @@
 }
 
 @keyframes sparks-fade {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .like-icon.is-liked .sparks {
