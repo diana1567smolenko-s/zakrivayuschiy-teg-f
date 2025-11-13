@@ -64,6 +64,10 @@
   border: 2px solid #000;
 }
 
+.card p:nth-child(4) {
+  padding: 0 25px 0 25px;
+}
+
 .card__title {
   font-weight: var(--font-weight-title);
   vertical-align: middle;
@@ -77,14 +81,8 @@
   padding: 20px 25px 25px 25px;
 }
 
-.last_sentence {
-  padding: 0px 25px 0 25px;
-
-}
-
 .card__text_paragraph,
-.card__title,
-.last_sentence {
+.card__title {
   font-family: var(--font-main), sans-serif;
   color: #000;
   font-size: 18px;
@@ -96,31 +94,31 @@
   overflow: hidden;
 }
 
-.image-filter_one {
+.image-filter_preparation-for-work {
   filter: grayscale(100%);
 }
 
-.image-filter_two {
+.image-filter_blank-sheet {
   filter: sepia(60%);
 }
 
-.image-filter_three {
+.image-filter_doesnot-work-out {
   filter: saturate(50%);
 }
 
-.image-filter_four {
+.image-filter_pursuit-of-perfection {
   filter: blur(2px);
 }
 
-.image-filter_five {
+.image-filter-who_are_nearby {
   filter: brightness(120%);
 }
 
-.image-filter_six {
+.image-filter_workarounds {
   filter: contrast(150%);
 }
 
-.image-filter_seven {
+.image-filter_feel-discouraged {
   filter: grayscale(50%) contrast(120%) brightness(110%) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
 }
 
@@ -234,7 +232,13 @@
 .button-block__save-button {
   width: clamp(306px, 40vh, 335px);
   min-height: 55px;
-  margin-top: 47px;
+  margin-top: 48px;
+}
+
+.button_save { 
+  display: inline-block;
+  padding-bottom: 10px;
+  vertical-align: middle;
 }
 
 .button__text {
@@ -247,7 +251,8 @@
 
 .button__icon {
   height: 21px;
-  margin-right: 5px;
+  margin-right: 4px;
+  margin-top: 12px;
 }
 
 .modal {
@@ -258,6 +263,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   align-items: center;
+  justify-items: center;
   width: clamp(341px, 30vh, 353px);
   margin: auto;
   min-height: 191px;
@@ -273,6 +279,7 @@
   gap: 20px;
   padding: 11px;
   z-index: 1;
+  padding: 11px 11px 15px 15px;
 }
 
 .modal__text {
@@ -293,7 +300,6 @@
 .modal__ok-button {
   width: clamp(261px, 30vh, 293px);
   padding: 7px 0 7px 0;
-  margin-left: 14px;
 }
 
 @media (width <=375px) {
@@ -340,27 +346,30 @@
     padding: 12px 0px 20px 23px;
   }
 
-  .modal__ok-button {
-    margin-left: 24px;
-    margin-bottom: 3px;
-  }
-
   .button-block__save-button {
     margin-top: var(--footer-button-margin-top);
-  }
+    width: clamp(306px, 20vh, 335px);
+  } 
 }
 
 .common_button {
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid rgba(0, 0, 0, 1);
   position: relative;
-  overflow: hidden;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   transition: color 0.5s ease-in-out;
   z-index: 0;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
+}
+
+.common_button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  z-index: 1;
 }
 
 .common_button:focus {
@@ -375,18 +384,13 @@
   background: #000;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.common_button .button__text {
-  position: relative;
   z-index: 2;
 }
-
+.common_button .button__text,
 .common_button .button__icon {
   position: relative;
-  z-index: 2;
-  transition: filter 0.5s ease-in-out, mix-blend-mode 0.5s ease-in-out;
+  z-index: 3;
+  mix-blend-mode: difference;
 }
 
 .common_button:hover::before {
@@ -398,9 +402,8 @@
   border: 2px solid rgba(0, 0, 0, 1);
 }
 
-.common_button:hover .button__icon {
+.common_button .button__icon {
   filter: invert(1);
-  mix-blend-mode: difference;
 }
 
 @media (376px <=width <=420px) {
