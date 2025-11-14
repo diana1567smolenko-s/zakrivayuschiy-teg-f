@@ -263,7 +263,7 @@
   grid-template-rows: auto 1fr;
   align-items: center;
   justify-items: center;
-  width: clamp(341px, 30vh, 353px);
+  width: clamp(341px, 40vh, 353px);
   margin: auto;
   min-height: 191px;
 }
