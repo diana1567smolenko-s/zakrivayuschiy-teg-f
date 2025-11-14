@@ -64,7 +64,7 @@
   border: 2px solid #000;
 }
 
-.card p:nth-child(4) {
+.card p:last-of-type {
   padding: 0 25px 0 25px;
 }
 
@@ -140,7 +140,7 @@
   height: 38px;
   margin-top: 3px;
   margin-bottom: 5px;
-  margin-right: -7px;
+  margin-right: -9px;
 }
 
 .card__icon-button:focus-visible {
@@ -233,26 +233,25 @@
   width: clamp(306px, 40vh, 335px);
   min-height: 55px;
   margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
-.button_save { 
-  display: inline-block;
-  padding-bottom: 10px;
-  vertical-align: middle;
-}
 
 .button__text {
   font-family: var(--font-accent), sans-serif;
   font-weight: var(--font-weight-header-title);
   font-size: var(--button-font-size);
   line-height: 90%;
-  letter-spacing: 0%;
+  vertical-align: middle;
+  word-break: keep-all;
 }
 
 .button__icon {
   height: 21px;
-  margin-right: 4px;
-  margin-top: 12px;
+  margin-right: 8px;
+  margin-left: 12px
 }
 
 .modal {
@@ -349,7 +348,7 @@
   .button-block__save-button {
     margin-top: var(--footer-button-margin-top);
     width: clamp(306px, 20vh, 335px);
-  } 
+  }
 }
 
 .common_button {
@@ -386,6 +385,7 @@
   transition: transform 0.5s ease-in-out;
   z-index: 2;
 }
+
 .common_button .button__text,
 .common_button .button__icon {
   position: relative;
